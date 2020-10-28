@@ -1,22 +1,14 @@
 #include <stdio.h>
-#include <conio.h>
 
- int main(){
-
- float x, sayac=0, toplam=0;
- float ortalama;
-
- printf("Ortalamasini almak istediginiz sayilari girin(Cikmak icin 9999 giriniz!):\n");
- scanf("%f", &x);
-
- while(x!=9999){
-    toplam+=x;
-    scanf("%f", &x);
-    sayac++;
- }
-  ortalama = toplam / sayac;
-  printf("\nGirilen sayilarin ortalamasi: %.3f", ortalama);
-
- getch();
- return 0;
+int main()
+{
+	int x, i = 0, toplam = 0;
+	while(x!=9999)
+	{
+		printf("Ortalamasiniz almak istediginiz sayiyi giriniz.");
+		scanf("%d", &x);
+		toplam = toplam + x;
+		i++;
+	}
+	printf("Ortalama: %d ", (toplam-9999)/(i-1) );
 }
