@@ -1,14 +1,22 @@
 #include <stdio.h>
-#include <conio.h>
 
 int main()
 {
-    long x, carpim=1;
 
-    for(x=1;x<=5;x++){
-        carpim*=x;
-        printf("%d! = %d\n", x,carpim);
-    }
-    getch();
-    return 0;
+int i, faktoriyel, sayi;
+faktoriyel = 1;
+
+printf("Faktoriyelini hesaplamak istediginiz sayiyi giriniz.");
+scanf("%d", &sayi);
+
+while(sayi>0)
+{
+	faktoriyel = faktoriyel * sayi;
+	sayi--;
+	
+}
+
+printf("Girdiginiz sayinin faktoriyeli : %d" , faktoriyel);
+
+
 }
