@@ -1,16 +1,18 @@
 #include <stdio.h>
-#include <conio.h>
 
 int main()
 {
-    int x, toplam=0;
 
-    for(x=2;x<=30;x+=2){
-        toplam+=x;
-    }
+int i, toplam;
+toplam = 0;
 
-    printf("2 ile 30 arasindaki cift sayilarin toplami %d dir.", toplam);
 
-    getch();
-    return 0;
+	for(i=1; i<=30; i++)
+	{
+		if(i%2==0)
+			toplam = toplam + i;
+	}
+	
+	printf("2'den 30'a kadar olan cift sayilarin toplami : %d", toplam);
+	
 }
