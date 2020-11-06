@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <math.h>
 
 int main()
@@ -8,8 +7,8 @@ int main()
     double miktar, anapara = 1000.0, oran=0.5;
 
     for(sayac=5;sayac<=10;sayac+=1){
-        printf("Yuzde %d faiz orani icin : \n\n", sayac);
-        printf("%4s%21s\n", "Yil", "Depozito Miktari\n");
+        printf("%s%d faiz orani icin : \n\n", "%" , sayac );
+        printf("%4s%21s\n", "Yil", "Faiz eklenmis paraniz\n");
 
         for(yil=1;yil<=10;yil++){
             miktar = anapara * pow(1.0+oran,yil);
@@ -18,6 +17,6 @@ int main()
         oran+=0.1;
     }
 
-    getch();
+   
     return 0;
 }
