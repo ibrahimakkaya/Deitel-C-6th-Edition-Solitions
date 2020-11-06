@@ -1,17 +1,20 @@
-#include <stdio.h>
+/* 1'den 15'e kadar olan tek tamsayilarin carpimini hesaplayan ve ekrana yazdiran bir program yaziniz. Halil Ibrahim Akkaya */ 
 
+#include <stdio.h>
 
 int main()
 {
-    int x, carpim=1;
+	int i, carpim = 1;
+	
+	for(i=1 ; i<=15 ; i++)
+	{
+		if(i%2!=0)
+		{
+			carpim = carpim * i;
+		}
+	
+	}
+	printf("1den 15e kadar olan tek sayilarin carpimi : %d" , carpim);
+	
 
-    for(x=1;x<=15;x+=2){
-        carpim*=x;
-    }
-
-    printf("1 ile 15 arasindaki teksayilarin carpimi %d", carpim);
-
-    getch();
-    return 0;
 }
-
