@@ -1,49 +1,58 @@
 #include <stdio.h>
-#include <conio.h>
 
-int main()
-{
-    int not=1;
-    float x,y,z,t,a,b,c,d,e,f, toplam;
-
-        switch(not){
-
-        case 1:
-            printf("Sattiginiz urun sayisini giriniz : ");
-            scanf("%f", &x);
-            y= x * 2.98;
-            printf("\nBirinci urunden kazanciniz %.3f\n", y);
-
-        case 2:
-            printf("\nSattiginiz urun sayisini giriniz : ");
-            scanf("%f", &z);
-            t= z * 4.50;
-            printf("\nIkinci urunden kazanciniz %.3f\n", t);
-
-        case 3:
-            printf("\nSattiginiz urun sayisini giriniz : ");
-            scanf("%f", &a);
-            b= a * 9.98;
-            printf("\nUcuncu urunden kazanciniz %.3f\n", b);
-
-        case 4:
-            printf("\nSattiginiz urun sayisini giriniz : ");
-            scanf("%f", &c);
-            d= c * 4.49;
-            printf("\nDorduncu urunden kazanciniz %.3f\n", d);
-
-        case 5:
-            printf("\nSattiginiz urun sayisini giriniz : ");
-            scanf("%f", &e);
-            f= e * 6.87;
-            printf("\nBesinci urunden kazanciniz %.3f\n", f);
-
-            }
-        toplam = f+d+b+t+y;
-
-        printf("\n Toplam kazanciniz: %.3f", toplam);
-
-
-    getch();
-    return 0;
+int main(){
+	
+	int urun_no,satis_adedi, fiyat,i,toplam = 0;
+	
+	
+	for(i = 1 ; i <= 5 ; i++)
+	{
+		printf(" %d. Urun numarasini giriniz : " , i);
+		scanf("%d", &urun_no);
+	
+	
+	switch (urun_no) {
+		
+		case 1:
+			printf("Satis adedini giriniz. ");
+			scanf("%d", &satis_adedi);
+			fiyat = 3 * satis_adedi;
+			break;
+			
+		case 2:
+			printf("Satis adedini giriniz. ");
+			scanf("%d", &satis_adedi);
+			fiyat = 5 * satis_adedi;
+			break;
+			
+		case 3:
+			printf("Satis adedini giriniz. ");
+			scanf("%d", &satis_adedi);
+			fiyat = 10 * satis_adedi;
+			break;
+			
+		case 4:
+			printf("Satis adedini giriniz. ");
+			scanf("%d", &satis_adedi);
+			fiyat = 43 * satis_adedi;
+			break;
+			
+		case 5:
+			printf("Satis adedini giriniz. ");
+			scanf("%d", &satis_adedi);
+			fiyat = 7 * satis_adedi;
+			break;
+			
+		default:
+			printf("Yanlis urun numarasi girildi.\a\n");
+			break;
+		
+			
+	}
+	toplam = toplam + fiyat;
+	}
+	
+	
+	printf("Cironuz : %d ", toplam);
+	
 }
