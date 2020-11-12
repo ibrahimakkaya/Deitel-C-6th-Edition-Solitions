@@ -1,19 +1,20 @@
 #include <stdio.h>
-#include <conio.h>
-#include <math.h>
+#include <math.h> // pow function kullanacaksiniz bu library gerekli.
 
-int main()
-{
-    int x, y, z;
-
-    for(x=1;x<=500;x++){
-        for(y=1;y<=500;y++){
-            for(z=1;z<=500;z++){
-                if(pow(x,2) == pow(y,2)+pow(z,2))
-                    printf("%d %d %d\n", y,z,x);
-            }
-        }
-    }
-    getch();
-    return 0;
+int main(){
+	
+	int kenar1 , kenar2 , hipotenus, hipotenuskare;
+	
+	for(kenar1 = 1 ; kenar1 < 500 ; kenar1++){
+		
+		for (kenar2 = 1 ; kenar2 < 500 ; kenar2++){
+			
+			for ( hipotenus = 1 ; hipotenus <= 500 ; hipotenus++){
+				
+				if(hipotenus * hipotenus == kenar1 * kenar1 + kenar2 * kenar2)
+					printf("%d %d %d \n ", kenar1 , kenar2 , hipotenus);
+			}
+				
+		}
+	}
 }
