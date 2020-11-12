@@ -1,45 +1,51 @@
 #include <stdio.h>
-#include <conio.h>
 
-int main()
-{
-    int kod=1, saat;
-    float mudur, vardiyaci, komisyoncu, parcaci, satis1,satis2,satis3,satis4;
-
-    switch(kod){
-
-        case 1:
-            printf("Mudure haftalik odemenizi girin : ");
-            scanf("%f", &mudur);
-
-        case 2:
-            printf("\nVardiya iscilerinizin saatlik maasini girin : ");
-            scanf("%f", &vardiyaci);
-            printf("\nVardiya iscilerinin haftalik calisma saatini girin : ");
-            scanf("%d", &saat);
-            if(saat<=40)
-                satis1 = vardiyaci * saat;
-            else
-                satis1 = (40*vardiyaci) + (saat-40)*(vardiyaci*1.5);
-        case 3:
-            printf("\nHaftalik brut satis miktarini girin :  ");
-            scanf("%f", &komisyoncu);
-            satis2 = 250 + (komisyoncu*5.7)/100;
-
-        case 4:
-            printf("\nParca iscilerinin malzeme basina sabit ucretini giriniz : ");
-            scanf("%f", &parcaci);
-            printf("\nParca iscilerinin urettigi malzeme sayisini giriniz : ");
-            scanf("%f", &satis3);
-            satis4 = satis3 * parcaci; break;
-}
-    printf("\n\nMudure vereceginiz maas           : %.2f\n", mudur);
-    printf("Vardiya iscisine vereceginiz maas : %.2f\n", satis1);
-    printf("Komisyon iscisine vereceginiz maas: %.2f\n", satis2);
-    printf("Parca iscisine vereceginiz maas   : %.2f\n", satis4);
-
-
-
-    getch();
-    return 0;
+int main(){
+	
+	
+	int tip;
+	int saat, ucret,brut,parca; 
+	
+	printf("Calisan tipini giriniz. \n 1. Vardiyali Isci \n 2. Komisyon Iscisi  \n 3. Parca Iscisi \n 4. Mudur ");
+	scanf("%d", &tip);
+	
+	switch(tip){
+		
+		case 1:
+			printf("Vardiyali iscinin kac saat calistigini giriniz:");
+			scanf("%d", &saat);
+			if(saat>40)
+				ucret = 40 + (saat - 40)*1.5;
+		
+			printf(" Vardiyali iscinin alacagi ucret : %d" , ucret);
+			break;
+		
+		case 2:
+			printf("Komisyon iscisinin brut satisini giriniz:");
+			scanf("%d", &brut);
+			ucret = 250 + brut + (brut*5.7/100);
+			printf(" Komisyon iscisinin alacagi ucret : %d" , ucret);
+			break;
+			
+		case 3:
+			printf("Parca iscisinin kac parca urettigini giriniz:");
+			scanf("%d", &parca);
+			ucret = parca*2;
+			printf(" Parca iscinin alacagi ucret : %d" , ucret);
+			break;
+			
+		case 4:
+			printf("Mudur'un alacagi ucret 10000 TL");
+			break;
+			
+		default:
+			printf("Lutfen listeden dogru rakami giriniz. ");
+			
+		
+	}
+	
+	
+	
+	
+	
 }
