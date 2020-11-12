@@ -1,24 +1,25 @@
 #include <stdio.h>
-#include <conio.h>
 
-int main()
-{
-    int x=1;
-    double pi=0, ilk=1;
-
-    for(x=1;x<=5000;x++){
-
-        if(x%2!=0){
-           pi= pi + (4/ilk);
-           printf("%f\n", pi);
-           }
-
-        else{
-           pi= pi -(4/ilk);
-           printf("%f\n", pi);
-        }
-        ilk+=2;
-}
-    getch();
-    return 0;
+int main(){
+	
+	double pi = 0 , payda = 1;
+	int sayac ;
+	
+	for(sayac = 1 ; sayac <=1000 ; sayac++){
+		
+		if(sayac%2 != 0){  // Cift ve tek durumuna gore hem payda 2 artacak hem de islem bir eksi bir arti seklinde gidecek if else bunu sagliyor.
+		
+			pi = pi + 4/payda;
+			
+		}
+		else{
+			pi = pi - 4/payda;
+			
+		}
+		printf("%f\n", pi);
+		payda+=2;
+	
+	}
+	
+	
 }
