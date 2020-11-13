@@ -1,24 +1,56 @@
-#include <stdio.h>
-#include <conio.h>
+# include <stdio.h>
 
-int main()
-{ int x, y, z;
 
-   for(x=1;x<=5;x++){
-        for(y=1;y<=5-x;y++)
-            printf(" ");
-        for(z=1;z<=2*x-1;z++)
-            printf("*");
-        printf("\n");
-   }
-
-   for(x=1;x<=4;x++){
-        for(y=1;y<=x;y++)
-            printf(" ");
-        for(z=1;z<=9-2*x;z++)
-            printf("*");
-        printf("\n");
-   }
-    getch();
-    return 0;
+int main(){
+	
+	int satir,yildiz,bosluk;
+	
+	for(satir = 1 ; satir <=5 ; satir++){
+		
+		for(bosluk = 1 ; bosluk <= 5-satir  ; bosluk++){
+			
+			printf(" ");
+		}	
+	
+		for(yildiz = 0 ; yildiz < 2*satir-1 ; yildiz++ ){
+			
+			printf("*");
+		
+		}
+		
+		printf("\n");
+		
+		
+		
+		
+	}
+	
+	for(satir = 1 ; satir <=4 ; satir++)
+	{
+		for(bosluk = 1 ; bosluk <=satir ; bosluk++)
+		{
+			printf(" ");
+		}
+		
+		for(yildiz = 1 ; yildiz <= 9 - 2*satir ; yildiz++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
